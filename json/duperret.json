@@ -1,13 +1,12 @@
 {
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Sacha Duperret",
-  "url": "",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sacha_Duperret.jpg?uselang=fr",
-  "sameAs": [
-    "https://x.com/SachaDuperret",
-    "https://instagram.com/sacha.duperret",
-    "https://www.linkedin.com/in/sacha-duperret/",
-    "https://sacha.duperret.eu"
-  ]
+	"@context": "http://schema.org",
+	"@type": "Person",
+	"familyName": "DUPERRET",
+	"givenName": "Sacha",
+	"worksFor": "https://u-bordeaux.fr",
+	"jobTitle": "Vice-président étudiant",
+	"alumniOf": "http://u-bordeaux.fr",
+	"image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sacha_Duperret.jpg",
+	"gender": "http://schema.org/Male",
+	"sameAs": ["https://twitter.com/SachaDuperret","https://www.linkedin.com/in/sacha-duperret/","https://instagram.com/sacha.duperret","https://www.wikidata.org/wiki/Q125629530","https://gravatar.com/sachaduperret"]
 }
