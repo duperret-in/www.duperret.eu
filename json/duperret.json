@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Sacha Duperret",
+  "url": "",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Sacha_Duperret.jpg?uselang=fr",
+  "sameAs": [
+    "https://x.com/SachaDuperret",
+    "https://instagram.com/sacha.duperret",
+    "https://www.linkedin.com/in/sacha-duperret/",
+    "https://sacha.duperret.eu"
+  ]
+}
