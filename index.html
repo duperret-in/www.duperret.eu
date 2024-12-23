@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duperret</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <title>Famille Duperret</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
-    <header>
-        <h1>Duperret</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Annuaire</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>Famille Duperret</h1>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#annuaire">Annuaire</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section id="accueil">
-            <h2>Site web de la famille Duperret</h2>
-        </section>
+<main>
+    <section id="accueil">
+        <h2>Site web de la famille Duperret</h2>
+        <img src="images/Sacha_Duperret.jfif" alt="Sacha Duperret" style="width: 200px; border-radius: 50%;">
+    </section>
 
-        <section id="annuaire">
-            <h2>Annuaire des membres</h2>
-            </section>
+    <section id="annuaire">
+        <h2 class="section-title">Annuaire des membres</h2>
+        <input type="text" id="search" placeholder="Rechercher une personne...">
+        <div class="membre-container" id="membre-container">
+            <!-- Les membres seront chargés ici dynamiquement -->
+        </div>
+    </section>
+</main>
 
-        <section id="a-propos">
-            <h2>À propos de nous</h2>
-        </section>
+<footer>
+    <p>&copy; 2024 Duperret</p>
+</footer>
 
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <p>Formulaire de contact ou informations de contact : <a href="mailto:hello@duperret.eu">hello@duperret.eu</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Duperret</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="js/rechercheAnnuaire.js"></script>
+<script src="js/loadMembres.js"></script>
 </body>
 </html>

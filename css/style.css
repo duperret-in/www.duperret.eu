@@ -1,63 +1,119 @@
 /* Général */
 body {
-    font-family: sans-serif;
-    margin: 0;
-  }
-  
-  header, footer {
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#annuaire {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.membre {
+  width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.membre img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   nav li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  /* Sections */
-  section {
-    padding: 20px;
-  }
-  
-  /* Annuaire */
-  #annuaire {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .membre {
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .membre img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    nav li {
       display: block;
       margin: 10px 0;
-    }
-  
-    .membre {
-      width: 100%;
-    }
   }
+
+  .membre {
+      width: 100%;
+  }
+}
+
+/* Style pour le champ de recherche */
+#search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto; /* Ajoute une marge de 20px en haut et en bas */
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    clear: both; /* Ajoute cette ligne pour forcer le champ de recherche à occuper toute la largeur */
+}
+
+/* Style pour les membres */
+.membre {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transition pour les membres */
+.membre.hidden {
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+/* Container pour les membres */
+.membre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style pour le titre de la section annuaire */
+.section-title {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}

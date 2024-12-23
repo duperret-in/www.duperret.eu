@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire Interne - Famille Duperret</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Annuaire Interne - Famille Duperret</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="annuaire-interne.html">Annuaire Interne</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="login">
+        <h2>Connexion</h2>
+        <form id="login-form">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Se connecter</button>
+        </form>
+    </section>
+
+    <section id="annuaire-detail" style="display: none;">
+        <h2>Annuaire des membres</h2>
+        <input type="text" id="search" placeholder="Rechercher un membre...">
+        <div class="membre-container" id="membre-container">
+            <!-- Les membres seront chargés ici dynamiquement -->
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Duperret</p>
+</footer>
+
+<script src="js/login.js"></script>
+<script src="js/loadMembresDetail.js"></script>
+</body>
+</html>
