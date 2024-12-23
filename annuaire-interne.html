@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Famille Duperret</title>
-    <meta name="description" content="Site web de la famille Duperret, incluant un annuaire des membres.">
-    <meta name="keywords" content="Famille Duperret, Annuaire, Membres">
+    <title>Annuaire Interne - Famille Duperret</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Famille Duperret</h1>
+    <h1>Annuaire Interne - Famille Duperret</h1>
     <nav>
         <ul>
             <!-- Les éléments de navigation seront chargés ici dynamiquement -->
@@ -24,12 +21,20 @@
 </header>
 
 <main>
-    <section id="accueil">
-        <h2>Site web de la famille Duperret</h2>
-        <p>Bienvenue sur ce site web.</p>
+    <section id="login">
+        <h2>Connexion</h2>
+        <form id="login-form">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Se connecter</button>
+        </form>
     </section>
 
-    <section id="annuaire">
+    <section id="annuaire-detail" style="display: none;">
         <h2 class="section-title">Annuaire des membres</h2>
         <input type="text" id="search" placeholder="Rechercher une personne...">
         <div class="membre-container" id="membre-container">
@@ -46,8 +51,8 @@
 
 <script src="js/loadNavigation.js"></script>
 <script src="js/loadFooter.js"></script>
-<script src="js/rechercheAnnuaire.js"></script>
-<script src="js/loadMembres.js"></script>
+<script src="js/login.js"></script>
+<script src="js/loadMembresDetail.js"></script>
 <script src="js/themeToggle.js"></script>
 </body>
 </html>

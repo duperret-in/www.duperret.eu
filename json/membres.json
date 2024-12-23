@@ -1,0 +1,138 @@
+[
+    {
+        "prenom": "Simone",
+        "nom": "Gary",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "Non spécifié"
+    },
+    {
+        "prenom": "Jean Georges",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "Non spécifié"
+    },
+    {
+        "prenom": "Bernard",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "bernard@duperret.eu"
+    },
+    {
+        "prenom": "Daniel",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "daniel@duperret.eu"
+    },
+    {
+        "prenom": "Claudine",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "claudine@duperret.eu"
+    },
+    {
+        "prenom": "Patrick",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "patrick@duperret.eu"
+    },
+    {
+        "prenom": "Jacques",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "jacques@duperret.eu"
+    },
+    {
+        "prenom": "Michel",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "michel@duperret.eu"
+    },
+    {
+        "prenom": "Dominique",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "dominique@duperret.eu"
+    },
+    {
+        "prenom": "Sacha",
+        "nom": "Duperret",
+        "image": "images/membres/sacha-duperret.webp",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "sacha@duperret.eu"
+    },
+    {
+        "prenom": "Yseult",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "yseult@duperret.eu"
+    },
+    {
+        "prenom": "Adam",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "adam@duperret.eu"
+    },
+    {
+        "prenom": "Florian",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "florian@duperret.eu"
+    },
+    {
+        "prenom": "Marion",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "marion@duperret.eu"
+    },
+    {
+        "prenom": "Allandé",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "allandé@duperret.eu"
+    },
+    {
+        "prenom": "Alba",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "alba@duperret.eu"
+    },
+    {
+        "prenom": "Nathalie",
+        "nom": "Plantey",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "nathalie@duperret.eu"
+    }
+]

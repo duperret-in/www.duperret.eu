@@ -18,8 +18,6 @@ Si vous pensez que c'est pertinent, vous pouvez demander une "Pull request".
 
 ## Todo
 
-- [X] Setup CI/CD intégration
-- [X] Land first version of the website
-- [ ] Dev all pages
-- [ ] Fix linkgs without pages behind
-- [ ] ...
+- [ ] Update member JSON data set
+- [ ] Add privacy page
+- [ ] Fix search bar on first page (annuaire)
