@@ -9,12 +9,13 @@ function loadMembresDetail() {
             data.forEach(membre => {
                 const membreDiv = document.createElement('div');
                 membreDiv.classList.add('membre');
+                const imageUrl = membre.image ? membre.image : 'images/default-avatar.png';
                 membreDiv.innerHTML = `
-                    <img src="${membre.image}" alt="${membre.nom}" loading="lazy">
-                    <h3>${membre.nom}</h3>
+                    <img src="${imageUrl}" alt="${membre.prenom} ${membre.nom}" loading="lazy">
+                    <h3>${membre.prenom} ${membre.nom}</h3>
                     <p>${membre.description}</p>
                     <p>Téléphone : ${membre.telephone}</p>
-                    <p>Email : ${membre.email}</p>
+                    <p>Email : <a href="mailto:${membre.email}">${membre.email}</a></p>
                 `;
                 container.appendChild(membreDiv);
             });

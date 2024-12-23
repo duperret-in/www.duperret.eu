@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
             data.forEach(membre => {
                 const membreDiv = document.createElement('div');
                 membreDiv.classList.add('membre');
+                const imageUrl = 'images/default-avatar.png';
                 membreDiv.innerHTML = `
-                    <img src="${membre.image}" alt="${membre.nom}" loading="lazy">
-                    <h3>${membre.nom}</h3>
-                    <p>${membre.description}</p>
+                    <img src="${imageUrl}" alt="${membre.prenom}" loading="lazy">
+                    <h3>${membre.prenom}</h3>
                 `;
                 container.appendChild(membreDiv);
             });

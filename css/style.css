@@ -1,4 +1,4 @@
-/* Général */
+/* Thème clair */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -25,13 +25,13 @@ nav li {
   margin: 0 10px;
 }
 
-a {
+nav a {
   text-decoration: none;
-  color: #fff;
+  color: #fff; /* Couleur du texte en blanc */
 }
 
-a:hover {
-  color: #ddd;
+nav a:hover {
+  color: #ddd; /* Couleur au survol */
 }
 
 /* Sections */
@@ -56,8 +56,8 @@ section {
 }
 
 .membre img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 300px; /* Définir une hauteur fixe */
 }
 
 /* Responsive design */
@@ -73,7 +73,7 @@ section {
 }
 
 /* Style pour le champ de recherche */
-#search {
+#search, #login-form input[type="text"], #login-form input[type="password"] {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -116,4 +116,187 @@ section {
     display: block;
     width: 100%;
     margin-bottom: 20px;
+}
+
+/* Thème sombre */
+body.dark-mode {
+  color: #f9f9f9;
+  background-color: #333;
+}
+
+header.dark-mode, footer.dark-mode {
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+nav.dark-mode a {
+  color: #f9f9f9; /* Couleur du texte en blanc pour le thème sombre */
+}
+
+nav.dark-mode a:hover {
+  color: #ddd; /* Couleur au survol pour le thème sombre */
+}
+
+/* Style pour l'icône de basculement de thème */
+#theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+/* Assurer que le texte passe au blanc en mode sombre */
+body.dark-mode, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p, body.dark-mode a {
+  color: #f9f9f9;
+}
+
+/* Styles spécifiques pour les tuiles en mode sombre */
+body.dark-mode .membre {
+    background-color: #444;
+    border-color: #555;
+    color: #f9f9f9;
+}
+
+body.dark-mode .membre h3, body.dark-mode .membre p {
+    color: #f9f9f9;
+}
+
+/* Styles spécifiques pour les liens email */
+.membre a {
+    color: inherit; /* Hérite de la couleur du parent */
+}
+
+.membre a:hover {
+    color: #ddd; /* Couleur au survol */
+}
+
+/* Styles pour le footer */
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li.left {
+    text-align: left;
+}
+
+footer ul li.right {
+    text-align: right;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte en blanc */
+}
+
+footer a:hover {
+    color: #fff; /* Couleur au survol en blanc */
+}
+
+/* Styles pour la scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Couleur de fond de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Couleur de la poignée de la scrollbar */
+    border-radius: 10px; /* Arrondir les coins de la poignée */
+    border: 3px solid #333; /* Ajouter une bordure pour créer un espace entre la poignée et le track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Couleur de la poignée au survol */
+}
+
+/* Style pour le formulaire de connexion */
+#login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #555;
+}
+
+/* Style pour le formulaire de contact */
+#contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
 }

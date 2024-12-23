@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Famille Duperret</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Contact</h1>
+    <nav>
+        <ul>
+            <!-- Les éléments de navigation seront chargés ici dynamiquement -->
+        </ul>
+    </nav>
+    <i id="theme-toggle" class="fas fa-moon"></i>
+</header>
+
+<main>
+    <section>
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br>
+            <label for="accept-terms">
+                <input type="checkbox" id="accept-terms" name="accept-terms" required>
+                J'accepte les conditions de traitement de mon message.
+            </label>
+            <p>En soumettant ce formulaire, vous acceptez que nous traitions vos informations pour répondre à votre message. Vos données ne seront pas partagées avec des tiers sans votre consentement préalable.</p>
+            <br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <ul>
+        <!-- Les éléments du footer seront chargés ici dynamiquement -->
+    </ul>
+</footer>
+
+<script src="js/loadNavigation.js"></script>
+<script src="js/loadFooter.js"></script>
+<script src="js/themeToggle.js"></script>
+</body>
+</html>

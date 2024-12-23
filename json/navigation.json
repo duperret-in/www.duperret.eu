@@ -1,0 +1,18 @@
+[
+    {
+        "text": "Accueil",
+        "href": "index.html"
+    },
+    {
+        "text": "Annuaire",
+        "href": "annuaire-interne.html"
+    },
+    {
+        "text": "À propos",
+        "href": "a-propos.html"
+    },
+    {
+        "text": "Contact",
+        "href": "contact.html"
+    }
+]
