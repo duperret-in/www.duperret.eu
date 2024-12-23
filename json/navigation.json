@@ -8,11 +8,11 @@
         "href": "annuaire-interne.html"
     },
     {
-        "text": "À propos",
-        "href": "a-propos.html"
-    },
-    {
         "text": "Contact",
         "href": "contact.html"
+    },
+    {
+        "text": "À propos",
+        "href": "a-propos.html"
     }
 ]

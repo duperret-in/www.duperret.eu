@@ -1,79 +1,114 @@
-/* Thème clair */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  color: #333;
-  background-color: #f9f9f9;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Thème clair */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ddd;
+}
+
+/* Layout */
 header, footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav a {
-  text-decoration: none;
-  color: #fff; /* Couleur du texte en blanc */
+    text-decoration: none;
+    color: #fff; /* Couleur du texte en blanc */
 }
 
 nav a:hover {
-  color: #ddd; /* Couleur au survol */
+    color: #ddd; /* Couleur au survol */
 }
 
 /* Sections */
 section {
-  padding: 40px 20px;
-  text-align: center;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 #annuaire {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+/* Composants */
 .membre {
-  width: 300px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .membre img {
-  width: 100%;
-  height: 300px; /* Définir une hauteur fixe */
+    width: 100%;
+    height: 300px;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  nav li {
-      display: block;
-      margin: 10px 0;
-  }
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
 
-  .membre {
-      width: 100%;
-  }
+    .membre {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
+        max-width: 100%;
+    }
+
+    #login-form, #contact-form {
+        max-width: 100%;
+    }
 }
 
 /* Style pour le champ de recherche */
-#search, #login-form input[type="text"], #login-form input[type="password"] {
+#search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -120,21 +155,21 @@ section {
 
 /* Thème sombre */
 body.dark-mode {
-  color: #f9f9f9;
-  background-color: #333;
+    color: #f9f9f9;
+    background-color: #333;
 }
 
 header.dark-mode, footer.dark-mode {
-  background-color: #222;
-  color: #f9f9f9;
+    background-color: #222;
+    color: #f9f9f9;
 }
 
 nav.dark-mode a {
-  color: #f9f9f9; /* Couleur du texte en blanc pour le thème sombre */
+    color: #f9f9f9; /* Couleur du texte en blanc pour le thème sombre */
 }
 
 nav.dark-mode a:hover {
-  color: #ddd; /* Couleur au survol pour le thème sombre */
+    color: #ddd; /* Couleur au survol pour le thème sombre */
 }
 
 /* Style pour l'icône de basculement de thème */
@@ -149,7 +184,7 @@ nav.dark-mode a:hover {
 
 /* Assurer que le texte passe au blanc en mode sombre */
 body.dark-mode, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p, body.dark-mode a {
-  color: #f9f9f9;
+    color: #f9f9f9;
 }
 
 /* Styles spécifiques pour les tuiles en mode sombre */
@@ -220,7 +255,7 @@ footer a:hover {
 /* Style pour le formulaire de connexion */
 #login-form {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     padding: 20px;
     margin: 20px auto;
     border: 1px solid #ddd;
