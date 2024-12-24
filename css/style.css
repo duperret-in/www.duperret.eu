@@ -294,6 +294,31 @@ footer a:hover {
     background-color: #555;
 }
 
+/* Thème sombre pour le formulaire de connexion */
+body.dark-mode #login-form {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode #login-form label,
+body.dark-mode #login-form input,
+body.dark-mode #login-form button {
+    color: #f9f9f9;
+    border-color: #555;
+}
+
+body.dark-mode #login-form input {
+    background-color: #555;
+}
+
+body.dark-mode #login-form button {
+    background-color: #666;
+}
+
+body.dark-mode #login-form button:hover {
+    background-color: #777;
+}
+
 /* Style pour le formulaire de contact */
 #contact-form {
     width: 100%;
@@ -334,4 +359,52 @@ footer a:hover {
 
 #contact-form button:hover {
     background-color: #555;
+}
+
+/* Thème sombre pour le formulaire de contact */
+body.dark-mode #contact-form {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode #contact-form label,
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea,
+body.dark-mode #contact-form button {
+    color: #f9f9f9;
+    border-color: #555;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    background-color: #555;
+}
+
+body.dark-mode #contact-form button {
+    background-color: #666;
+}
+
+body.dark-mode #contact-form button:hover {
+    background-color: #777;
+}
+
+/* Style pour la case de consentement */
+.consent-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.consent-container input {
+    margin-right: 10px;
+}
+
+.consent-text {
+    margin-top: -10px;
+    font-size: 14px;
+    color: #666;
+}
+
+body.dark-mode .consent-text {
+    color: #ccc;
 }
