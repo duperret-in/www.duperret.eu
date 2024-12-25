@@ -524,6 +524,14 @@ body.dark-mode .consent-text {
     #login-form, #contact-form {
         max-width: 100%;
     }
+
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-item {
+        padding: 15px;
+    }
 }
 
 #login {
