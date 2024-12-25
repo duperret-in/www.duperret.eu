@@ -162,8 +162,8 @@ section {
 
 #annuaire {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Composants */
@@ -197,6 +197,19 @@ section {
     clear: both;
 }
 
+/* Style pour le champ de recherche de l'index */
+#search {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* Transition pour les membres */
 .membre.hidden {
     transform: scale(0.95);
@@ -208,6 +221,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 /* Style pour le titre de la section annuaire */
