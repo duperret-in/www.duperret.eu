@@ -1,0 +1,70 @@
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between; /* S'assurer que les éléments sont espacés */
+        margin-top: 10px;
+    }
+
+    .member-access-button, #theme-toggle {
+        margin: 0;
+    }
+
+    .member-access-button {
+        width: auto;
+        text-align: center;
+    }
+
+    #theme-toggle {
+        font-size: 24px;
+        position: static;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .membre {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
+        max-width: 100%;
+    }
+
+    #login-form, #contact-form {
+        max-width: 100%;
+    }
+
+    .member-access-button {
+        position: static;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}

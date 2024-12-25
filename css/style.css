@@ -30,7 +30,107 @@ header, footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Ajouté pour espacer les éléments */
+}
+
+header nav ul li {
+    margin-right: 20px;
+    flex: 1 1 auto;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 700;
+}
+
+header nav ul li a:hover {
+    color: #0056b3;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre les éléments */
+    margin-left: auto; /* S'assurer que le conteneur est aligné à droite */
+}
+
+.member-access-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.member-access-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.account-request-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.account-request-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    color: #333; /* Couleur sombre en mode clair */
+    margin-left: auto;
+    position: relative; /* Modifié pour éviter le chevauchement */
+    transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+body.dark-mode #theme-toggle {
+    color: #fff; /* Couleur claire en mode sombre */
 }
 
 nav ul {
@@ -47,11 +147,11 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* Couleur du texte en blanc */
+    color: #fff;
 }
 
 nav a:hover {
-    color: #ddd; /* Couleur au survol */
+    color: #ddd;
 }
 
 /* Sections */
@@ -82,54 +182,18 @@ section {
     height: 300px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .membre {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 20px 10px;
-    }
-
-    #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
-        max-width: 100%;
-    }
-
-    #login-form, #contact-form {
-        max-width: 100%;
-    }
-}
-
 /* Style pour le champ de recherche */
 #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    margin: 20px auto; /* Ajoute une marge de 20px en haut et en bas */
+    margin: 20px auto;
     display: block;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    clear: both; /* Ajoute cette ligne pour forcer le champ de recherche à occuper toute la largeur */
-}
-
-/* Style pour les membres */
-.membre {
-    width: 300px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    clear: both;
 }
 
 /* Transition pour les membres */
@@ -165,21 +229,11 @@ header.dark-mode, footer.dark-mode {
 }
 
 nav.dark-mode a {
-    color: #f9f9f9; /* Couleur du texte en blanc pour le thème sombre */
+    color: #f9f9f9;
 }
 
 nav.dark-mode a:hover {
-    color: #ddd; /* Couleur au survol pour le thème sombre */
-}
-
-/* Style pour l'icône de basculement de thème */
-#theme-toggle {
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
+    color: #ddd;
 }
 
 /* Assurer que le texte passe au blanc en mode sombre */
@@ -200,11 +254,11 @@ body.dark-mode .membre h3, body.dark-mode .membre p {
 
 /* Styles spécifiques pour les liens email */
 .membre a {
-    color: inherit; /* Hérite de la couleur du parent */
+    color: inherit;
 }
 
 .membre a:hover {
-    color: #ddd; /* Couleur au survol */
+    color: #ddd;
 }
 
 /* Styles pour le footer */
@@ -226,11 +280,11 @@ footer ul li.right {
 
 footer a {
     text-decoration: none;
-    color: #fff; /* Couleur du texte en blanc */
+    color: #fff;
 }
 
 footer a:hover {
-    color: #fff; /* Couleur au survol en blanc */
+    color: #fff;
 }
 
 /* Styles pour la scrollbar */
@@ -239,17 +293,17 @@ footer a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: #333; /* Couleur de fond de la scrollbar */
+    background: #333;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #555; /* Couleur de la poignée de la scrollbar */
-    border-radius: 10px; /* Arrondir les coins de la poignée */
-    border: 3px solid #333; /* Ajouter une bordure pour créer un espace entre la poignée et le track */
+    background-color: #555;
+    border-radius: 10px;
+    border: 3px solid #333;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #777; /* Couleur de la poignée au survol */
+    background-color: #777;
 }
 
 /* Style pour le formulaire de connexion */
@@ -408,3 +462,211 @@ body.dark-mode #contact-form button:hover {
 body.dark-mode .consent-text {
     color: #ccc;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left, .header-right, .header-actions {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-actions {
+        justify-content: space-between; /* S'assurer que les éléments sont espacés */
+        margin-top: 10px;
+    }
+
+    .member-access-button {
+        width: auto;
+        text-align: center;
+    }
+
+    #theme-toggle {
+        font-size: 24px;
+        position: static;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .membre {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
+        max-width: 100%;
+    }
+
+    #login-form, #contact-form {
+        max-width: 100%;
+    }
+}
+
+#login {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#faq {
+    padding: 40px 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.faq-questions {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-questions h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-questions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq-questions ul li {
+    margin-bottom: 10px;
+}
+
+.faq-questions ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.faq-questions ul li a:hover {
+    color: #0056b3;
+}
+
+.faq-answers {
+    flex: 2;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-item p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.faq-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    list-style-type: none; /* Supprimer les bullet points */
+    padding-left: 0;
+}
+
+/* Thème sombre pour la page Accès Membre */
+body.dark-mode #faq {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .faq-questions {
+    background-color: #555;
+}
+
+body.dark-mode .faq-answers {
+    background-color: #666;
+}
+
+body.dark-mode #faq h3,
+body.dark-mode #faq p,
+body.dark-mode #faq ul li {
+    color: #f9f9f9;
+    border-color: #555;
+}
+
+/* ...existing code... */
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-item p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Thème sombre pour la page Accès Membre */
+body.dark-mode #faq {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .faq-item {
+    background-color: #666;
+}
+
+body.dark-mode #faq h3,
+body.dark-mode #faq p {
+    color: #f9f9f9;
+    border-color: #555;
+}
+
+/* ...existing code... */
