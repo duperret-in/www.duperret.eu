@@ -13,9 +13,9 @@
 <body>
 
 <header>
-    <div class="header-left">
+    <a href="index.html" class="header-left">
         <h1>Famille Duperret</h1>
-    </div>
+    </a>
     <nav class="header-right">
         <ul>
             <!-- Les éléments de navigation seront chargés ici dynamiquement -->
@@ -24,13 +24,15 @@
     <div class="header-actions">
         <a href="acces-membre.html" class="member-access-button">Accès Membres</a>
         <i id="theme-toggle" class="fas fa-moon"></i>
+        <i id="menu-toggle" class="fas fa-bars"></i>
     </div>
 </header>
 
 <main>
     <section id="login">
         <h2>Accès Interne</h2>
-        <p>Pour accéder à l'intranet de la famille Duperret, veuillez visiter <a href="https://interne.duperret.eu" target="_blank">interne.duperret.eu</a>.</p>
+        <p>Pour accéder à l'intranet de la famille Duperret, veuillez cliquer sur le bouton ci-dessous :</p>
+        <a href="https://interne.duperret.eu" target="_blank" class="intranet-button">Me connecter</a>
     </section>
 
     <section id="faq">
@@ -66,5 +68,6 @@
 <script src="js/loadNavigation.js"></script>
 <script src="js/loadFooter.js"></script>
 <script src="js/themeToggle.js"></script>
+<script src="js/menuToggle.js"></script>
 </body>
 </html>
