@@ -6,6 +6,7 @@
     <title>Famille Duperret</title>
     <meta name="description" content="Site web de la famille Duperret, incluant un annuaire des membres.">
     <meta name="keywords" content="Famille Duperret, Annuaire, Membres">
+    <meta name="author" content="Association Duperret">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -15,30 +16,30 @@
 <body>
 
 <header>
-    <a href="index.html" class="header-left">
+    <a href="index.html" class="header-left" aria-label="Accueil">
         <h1>Famille Duperret</h1>
     </a>
-    <nav class="header-right">
+    <nav class="header-right" aria-label="Navigation principale">
         <ul>
             <!-- Les éléments de navigation seront chargés ici dynamiquement -->
         </ul>
     </nav>
     <div class="header-actions">
-        <a href="acces-membre.html" class="member-access-button">Accès Membres</a>
-        <i id="theme-toggle" class="fas fa-moon"></i>
-        <i id="menu-toggle" class="fas fa-bars"></i>
+        <a href="acces-membre.html" class="member-access-button" aria-label="Accès Membres">Accès Membres</a>
+        <i id="theme-toggle" class="fas fa-moon" aria-label="Changer de thème"></i>
+        <i id="menu-toggle" class="fas fa-bars" aria-label="Menu"></i>
     </div>
 </header>
 
 <main>
-    <section id="accueil">
-        <h2>Site web de la famille Duperret</h2>
+    <section id="accueil" aria-labelledby="accueil-title">
+        <h2 id="accueil-title">Site web de la famille Duperret</h2>
         <p>Bienvenue sur ce site web.</p>
     </section>
 
-    <section id="annuaire">
-        <h2 class="section-title">Annuaire des membres</h2>
-        <input type="text" id="search" placeholder="Rechercher une personne...">
+    <section id="annuaire" aria-labelledby="annuaire-title">
+        <h2 id="annuaire-title" class="section-title">Annuaire des membres</h2>
+        <input type="text" id="search" placeholder="Rechercher une personne..." aria-label="Rechercher une personne">
         <div class="membre-container" id="membre-container">
             <!-- Les membres seront chargés ici dynamiquement -->
         </div>
@@ -46,7 +47,7 @@
 </main>
 
 <footer>
-    <ul>
+    <ul aria-label="Liens de pied de page">
         <!-- Les éléments du footer seront chargés ici dynamiquement -->
     </ul>
 </footer>

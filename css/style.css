@@ -512,6 +512,12 @@ body.dark-mode .consent-text {
         margin: 10px 0;
     }
 
+    .membre img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1; /* Maintenir le ratio 1:1 */
+    }
+
     section {
         padding: 20px 10px;
     }

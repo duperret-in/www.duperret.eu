@@ -19,3 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Erreur lors du chargement des membres:', error));
 });
+
+// Tests unitaires
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { loadMembres };
+}

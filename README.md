@@ -50,3 +50,11 @@ Nous avons mis en place plusieurs pratiques pour rendre le site plus durable :
 - [ ] Corriger la barre de recherche sur la première page (annuaire)
 - [ ] Optimiser les performances du site
 - [ ] Ajouter des tests unitaires pour les scripts JavaScript
+
+## Améliorations proposées
+
+- **Améliorer l'accessibilité** : Ajouter des attributs ARIA et améliorer le contraste des couleurs pour rendre le site plus accessible aux personnes handicapées.
+- **Ajouter un système de commentaires** : Permettre aux membres de laisser des commentaires sur les profils des autres membres.
+- **Intégrer un calendrier d'événements** : Ajouter une section pour afficher les événements à venir de l'association.
+- **Optimiser le SEO** : Améliorer les balises meta et ajouter des balises structurées pour améliorer le référencement du site.
+- **Ajouter une fonctionnalité de notification** : Envoyer des notifications aux membres pour les mises à jour importantes et les événements.
