@@ -4,7 +4,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     const password = document.getElementById('password').value;
 
     // Vérifiez les informations d'identification (vous pouvez remplacer cette partie par une vérification réelle)
-    if (username === 'admin' && password === 'password') {
+    if (username === 'famille' && password === 'duperret') {
         document.getElementById('login').style.display = 'none';
         document.getElementById('annuaire-detail').style.display = 'block';
         loadMembresDetail();

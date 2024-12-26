@@ -11,7 +11,7 @@ function loadMembresDetail() {
                 membreDiv.classList.add('membre');
                 const imageUrl = membre.image ? membre.image : 'images/default-avatar.png';
                 membreDiv.innerHTML = `
-                    <img src="${imageUrl}" alt="${membre.prenom} ${membre.nom}" loading="lazy">
+                    <img src="${imageUrl}" alt="Photo de ${membre.prenom} ${membre.nom}" loading="lazy">
                     <h3>${membre.prenom} ${membre.nom}</h3>
                     <p>${membre.description}</p>
                     <p>Téléphone : ${membre.telephone}</p>

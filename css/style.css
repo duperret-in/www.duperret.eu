@@ -30,7 +30,104 @@ header, footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    flex-wrap: nowrap; /* Empêcher le retour à la ligne */
+}
+
+.header-left {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Aligner verticalement */
+}
+
+.header-right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Aligner verticalement */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav ul li {
+    margin-right: 20px;
+    flex: 1 1 auto;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 700;
+}
+
+header nav ul li a:hover {
+    color: #0056b3;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    justify-content: flex-end; /* Aligner les boutons à droite */
+}
+
+.member-access-button, .account-request-button, .intranet-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold; /* Ajouter du gras au texte */
+    text-align: center; /* Centrer le texte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
+}
+
+.account-request-button, .intranet-button {
+    margin-top: 20px;
+}
+
+.member-access-button:hover, .account-request-button:hover, .intranet-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Ajouter un effet de zoom */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Augmenter l'ombre */
+}
+
+#theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    margin-left: auto;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #theme-toggle {
+    color: #fff;
 }
 
 nav ul {
@@ -47,11 +144,11 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* Couleur du texte en blanc */
+    color: #fff;
 }
 
 nav a:hover {
-    color: #ddd; /* Couleur au survol */
+    color: #ddd;
 }
 
 /* Sections */
@@ -62,8 +159,8 @@ section {
 
 #annuaire {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Composants */
@@ -80,31 +177,7 @@ section {
 .membre img {
     width: 100%;
     height: 300px;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .membre {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 20px 10px;
-    }
-
-    #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
-        max-width: 100%;
-    }
-
-    #login-form, #contact-form {
-        max-width: 100%;
-    }
+    object-fit: cover;
 }
 
 /* Style pour le champ de recherche */
@@ -112,24 +185,17 @@ section {
     width: 100%;
     max-width: 400px;
     padding: 10px;
-    margin: 20px auto; /* Ajoute une marge de 20px en haut et en bas */
+    margin: 20px auto;
     display: block;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    clear: both; /* Ajoute cette ligne pour forcer le champ de recherche à occuper toute la largeur */
+    clear: both;
 }
 
-/* Style pour les membres */
-.membre {
-    width: 300px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+#search {
+    max-width: 600px;
 }
 
 /* Transition pour les membres */
@@ -143,6 +209,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 /* Style pour le titre de la section annuaire */
@@ -165,29 +232,17 @@ header.dark-mode, footer.dark-mode {
 }
 
 nav.dark-mode a {
-    color: #f9f9f9; /* Couleur du texte en blanc pour le thème sombre */
+    color: #f9f9f9;
 }
 
 nav.dark-mode a:hover {
-    color: #ddd; /* Couleur au survol pour le thème sombre */
+    color: #ddd;
 }
 
-/* Style pour l'icône de basculement de thème */
-#theme-toggle {
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-}
-
-/* Assurer que le texte passe au blanc en mode sombre */
 body.dark-mode, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p, body.dark-mode a {
     color: #f9f9f9;
 }
 
-/* Styles spécifiques pour les tuiles en mode sombre */
 body.dark-mode .membre {
     background-color: #444;
     border-color: #555;
@@ -198,13 +253,12 @@ body.dark-mode .membre h3, body.dark-mode .membre p {
     color: #f9f9f9;
 }
 
-/* Styles spécifiques pour les liens email */
 .membre a {
-    color: inherit; /* Hérite de la couleur du parent */
+    color: inherit;
 }
 
 .membre a:hover {
-    color: #ddd; /* Couleur au survol */
+    color: #ddd;
 }
 
 /* Styles pour le footer */
@@ -226,11 +280,11 @@ footer ul li.right {
 
 footer a {
     text-decoration: none;
-    color: #fff; /* Couleur du texte en blanc */
+    color: #fff;
 }
 
 footer a:hover {
-    color: #fff; /* Couleur au survol en blanc */
+    color: #fff;
 }
 
 /* Styles pour la scrollbar */
@@ -239,17 +293,17 @@ footer a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: #333; /* Couleur de fond de la scrollbar */
+    background: #333;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #555; /* Couleur de la poignée de la scrollbar */
-    border-radius: 10px; /* Arrondir les coins de la poignée */
-    border: 3px solid #333; /* Ajouter une bordure pour créer un espace entre la poignée et le track */
+    background-color: #555;
+    border-radius: 10px;
+    border: 3px solid #333;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #777; /* Couleur de la poignée au survol */
+    background-color: #777;
 }
 
 /* Style pour le formulaire de connexion */
@@ -294,7 +348,6 @@ footer a:hover {
     background-color: #555;
 }
 
-/* Thème sombre pour le formulaire de connexion */
 body.dark-mode #login-form {
     background-color: #444;
     border-color: #555;
@@ -361,7 +414,6 @@ body.dark-mode #login-form button:hover {
     background-color: #555;
 }
 
-/* Thème sombre pour le formulaire de contact */
 body.dark-mode #contact-form {
     background-color: #444;
     border-color: #555;
@@ -406,5 +458,312 @@ body.dark-mode #contact-form button:hover {
 }
 
 body.dark-mode .consent-text {
+    color: #ccc;
+}
+
+/* Media Queries pour mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left, .header-right, .header-actions {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-actions {
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .member-access-button {
+        width: auto;
+        text-align: center;
+    }
+
+    #theme-toggle {
+        font-size: 24px;
+        position: static;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .membre {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    #search, #login-form input[type="text"], #login-form input[type="password"], #contact-form input, #contact-form textarea {
+        max-width: 100%;
+    }
+
+    #login-form, #contact-form {
+        max-width: 100%;
+    }
+
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-item {
+        padding: 15px;
+    }
+}
+
+/* Style pour le menu hamburger */
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+body.dark-mode #menu-toggle {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Masquer le menu par défaut */
+        flex-direction: column;
+        width: 100%;
+        background-color: #f8f9fa; /* Couleur de fond en mode clair */
+        transition: max-height 0.3s ease-in-out; /* Ajouter une animation */
+        overflow: hidden;
+        max-height: 0;
+        margin-top: 10px; /* Ajouter un espace en haut pour éviter le chevauchement */
+    }
+
+    body.dark-mode header nav ul {
+        background-color: #222; /* Couleur de fond en mode sombre */
+    }
+
+    header nav ul.show {
+        display: flex; /* Afficher le menu lorsque la classe 'show' est ajoutée */
+        max-height: 500px; /* Définir une hauteur maximale pour l'animation */
+    }
+
+    #menu-toggle {
+        display: block; /* Afficher le menu hamburger en mode mobile */
+    }
+}
+
+/* Sections spécifiques */
+#login {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#faq {
+    padding: 40px 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.faq-questions {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-questions h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-questions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq-questions ul li {
+    margin-bottom: 10px;
+}
+
+.faq-questions ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.faq-questions ul li a:hover {
+    color: #0056b3;
+}
+
+.faq-answers {
+    flex: 2;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-item p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.faq-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+body.dark-mode #faq {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .faq-questions {
+    background-color: #555;
+}
+
+body.dark-mode .faq-answers {
+    background-color: #666;
+}
+
+body.dark-mode #faq h3,
+body.dark-mode #faq p,
+body.dark-mode #faq ul li {
+    color: #f9f9f9;
+    border-color: #555;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.faq-item p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+body.dark-mode #faq {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .faq-item {
+    background-color: #666;
+}
+
+body.dark-mode #faq h3,
+body.dark-mode #faq p {
+    color: #f9f9f9;
+    border-color: #555;
+}
+
+/* Styles pour les listes */
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles spécifiques pour la page privacy */
+.privacy-container {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.privacy-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007BFF;
+}
+
+.privacy-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.privacy-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.privacy-container ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Thème sombre pour la page privacy */
+body.dark-mode .privacy-container {
+    background-color: #444;
+    color: #f9f9f9;
+}
+
+body.dark-mode .privacy-container h2 {
+    color: #f9f9f9;
+}
+
+body.dark-mode .privacy-container p,
+body.dark-mode .privacy-container ul li {
     color: #ccc;
 }

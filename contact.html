@@ -11,13 +11,19 @@
 <body>
 
 <header>
-    <h1>Contact</h1>
-    <nav>
+    <a href="index.html" class="header-left">
+        <h1>Famille Duperret</h1>
+    </a>
+    <nav class="header-right">
         <ul>
             <!-- Les éléments de navigation seront chargés ici dynamiquement -->
         </ul>
     </nav>
-    <i id="theme-toggle" class="fas fa-moon"></i>
+    <div class="header-actions">
+        <a href="acces-membre.html" class="member-access-button">Accès Membres</a>
+        <i id="theme-toggle" class="fas fa-moon"></i>
+        <i id="menu-toggle" class="fas fa-bars"></i>
+    </div>
 </header>
 
 <main>
@@ -52,8 +58,9 @@
     </ul>
 </footer>
 
-<script src="js/loadNavigation.js"></script>
-<script src="js/loadFooter.js"></script>
-<script src="js/themeToggle.js"></script>
+<script src="js/loadNavigation.js" defer></script>
+<script src="js/loadFooter.js" defer></script>
+<script src="js/themeToggle.js" defer></script>
+<script src="js/menuToggle.js" defer></script>
 </body>
 </html>
