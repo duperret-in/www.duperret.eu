@@ -1,0 +1,58 @@
+[
+  {
+    "image": "images/SACHA_DUPERRET_TROPHEES_ASSOCIATIONS.webp",
+    "alt": "Vice-président étudiant du campus de Talence",
+    "title": "Vice-président étudiant du campus de Talence",
+    "description": "Université de Bordeaux",
+    "link": "https://u-bordeaux.fr",
+    "linkText": "U-BORDEAUX.FR"
+  },
+  {
+    "image": "images/SACHA_DUPERRET_EXPERT.webp",
+    "alt": "Expert - Hcéres",
+    "title": "Expert",
+    "description": "Haut Conseil de l’évaluation de la recherche et de l’enseignement supérieur (Hcéres)",
+    "link": "https://hceres.fr",
+    "linkText": "HCERES.FR"
+  },
+  {
+    "image": "images/SACHA_DUPERRET_REUNION.webp",
+    "alt": "Président - CEVPU",
+    "title": "Président",
+    "description": "Conférence nationale des étudiants vice-présidents d’université",
+    "link": "https://cevpu.org",
+    "linkText": "CEVPU.ORG"
+  },
+  {
+    "image": "images/SACHA_DUPERRET_COORDINATION.webp",
+    "alt": "Coordinateur des ambassadeurs transitions",
+    "title": "Coordinateur des ambassadeurs des transitions environnementales et sociétales",
+    "description": "Université de Bordeaux",
+    "link": "https://u-bordeaux.fr",
+    "linkText": "U-BORDEAUX.FR"
+  },
+  {
+    "image": "images/SACHA_DUPERRET_FESTIVAL.webp",
+    "alt": "Directeur sécurité technique prévention",
+    "title": "Directeur sécurité-technique-prévention",
+    "description": "Festival Mayday",
+    "link": "https://maydayfestival.fr",
+    "linkText": "MAYDAYFESTIVAL.FR"
+  },
+  {
+    "image": "images/SACHA_DUPERRET_COREALE.webp",
+    "alt": "Membre - CORELAE",
+    "title": "Membre du Comité numérique pour la réussite étudiante et l’agilité des établissements",
+    "description": "Ministère de l’Enseignement Supérieur",
+    "link": "https://www.enseignementsup-recherche.gouv.fr/fr",
+    "linkText": "ESR.GOUV.FR"
+  },
+  {
+    "image": "images/SACHA_DUPERRET_METROPOLE.webp",
+    "alt": "Personnalité qualifiée du conseil de développement durable",
+    "title": "Personnalité qualifiée du conseil de développement durable",
+    "description": "Bordeaux Métropole",
+    "link": "https://bordeaux-metropole.fr",
+    "linkText": "BORDEAUX-METROPOLE.FR"
+  }
+]
