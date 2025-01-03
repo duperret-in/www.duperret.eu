@@ -129,10 +129,18 @@
     },
     {
         "prenom": "Nathalie",
-        "nom": "Plantey",
+        "nom": "Duperret",
         "image": "",
         "description": "Non spécifiée",
         "telephone": "Non spécifié",
         "email": "nathalie@duperret.eu"
+    },
+    {
+        "prenom": "Anais",
+        "nom": "Duperret",
+        "image": "",
+        "description": "Non spécifiée",
+        "telephone": "Non spécifié",
+        "email": "anais@duperret.eu"
     }
 ]
