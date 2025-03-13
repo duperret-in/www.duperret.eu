@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Famille Duperret</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="header-left" aria-label="Accueil">
+        <h1>Famille Duperret</h1>
+    </a>
+    <nav class="header-right" aria-label="Navigation principale">
+        <ul>
+            <!-- Les éléments de navigation seront chargés ici dynamiquement -->
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <a href="acces-membre.html" class="member-access-button" aria-label="Accès Membres">Accès Membres</a>
+        <i id="theme-toggle" class="fas fa-moon" aria-label="Changer de thème"></i>
+        <i id="menu-toggle" class="fas fa-bars" aria-label="Menu"></i>
+    </div>
+</header>
+
+<main>
+    <section aria-labelledby="contact-title">
+        <h2 id="contact-title">Contactez-nous</h2>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br>
+            <div class="consent-container">
+                <input type="checkbox" id="accept-terms" name="accept-terms" required>
+                <label for="accept-terms">
+                    J'accepte les conditions de traitement de mon message.
+                </label>
+            </div>
+            <p class="consent-text">En soumettant ce formulaire, vous acceptez que nous traitions vos informations pour répondre à votre message. Vos données ne seront pas partagées avec des tiers sans votre consentement préalable.</p>
+            <br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <ul aria-label="Liens de pied de page">
+        <!-- Les éléments du footer seront chargés ici dynamiquement -->
+    </ul>
+</footer>
+
+<script src="js/loadNavigation.js" defer></script>
+<script src="js/loadFooter.js" defer></script>
+<script src="js/themeToggle.js" defer></script>
+<script src="js/menuToggle.js" defer></script>
+</body>
+</html>

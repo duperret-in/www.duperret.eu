@@ -3,64 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Famille Duperret</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>À propos - Famille Duperret</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-<header>
-    <a href="index.html" class="header-left" aria-label="Accueil">
-        <h1>Famille Duperret</h1>
-    </a>
-    <nav class="header-right" aria-label="Navigation principale">
-        <ul>
-            <!-- Les éléments de navigation seront chargés ici dynamiquement -->
-        </ul>
-    </nav>
-    <div class="header-actions">
-        <a href="acces-membre.html" class="member-access-button" aria-label="Accès Membres">Accès Membres</a>
-        <i id="theme-toggle" class="fas fa-moon" aria-label="Changer de thème"></i>
-        <i id="menu-toggle" class="fas fa-bars" aria-label="Menu"></i>
-    </div>
-</header>
-
-<main>
-    <section aria-labelledby="contact-title">
-        <h2 id="contact-title">Contactez-nous</h2>
-        <form id="contact-form">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <br>
-            <div class="consent-container">
-                <input type="checkbox" id="accept-terms" name="accept-terms" required>
-                <label for="accept-terms">
-                    J'accepte les conditions de traitement de mon message.
-                </label>
-            </div>
-            <p class="consent-text">En soumettant ce formulaire, vous acceptez que nous traitions vos informations pour répondre à votre message. Vos données ne seront pas partagées avec des tiers sans votre consentement préalable.</p>
-            <br>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-</main>
-
-<footer>
-    <ul aria-label="Liens de pied de page">
-        <!-- Les éléments du footer seront chargés ici dynamiquement -->
-    </ul>
-</footer>
-
-<script src="js/loadNavigation.js" defer></script>
-<script src="js/loadFooter.js" defer></script>
-<script src="js/themeToggle.js" defer></script>
-<script src="js/menuToggle.js" defer></script>
+    <main>
+        <a href="https://home.duperret.eu" class="button top-right-btn">Connexion</a>
+        <a href="/index.html" class="button top-left-btn">Accueil</a>
+        <div class="container">
+            <img src="/images/brand/logo_horizontal_sans-fond.png" alt="Logo" class="logo">
+            <section aria-labelledby="contact-title">
+                <h2 id="contact-title">Contactez-nous</h2>
+                <iframe src="https://automation.duperret.eu/form/ac28d377-5737-4a29-a3ce-ab2a07b7d18b" width="100%" height="500px" style="border:none;" allowfullscreen></iframe>
+                <p>Ne partagez pas de mot de passe ou d'informations sensibles via ce formulaire.</p>
+                <p>Nous donnerons suite à votre message dans les meilleurs délais.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024-<span id="current-year"></span> Duperret - <a href="/a-propos.html">Mentions légales</a>
+    </footer>
+    <script src="js/footerYear.js" defer></script>
 </body>
 </html>

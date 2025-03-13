@@ -1,62 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Famille Duperret</title>
-    <meta name="description" content="Site web de la famille Duperret, incluant un annuaire des membres.">
-    <meta name="keywords" content="Famille Duperret, Annuaire, Membres">
-    <meta name="author" content="Association Duperret">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-mobile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <canvas id="animated-bg"></canvas>
 
-<header>
-    <a href="index.html" class="header-left" aria-label="Accueil">
-        <h1>Famille Duperret</h1>
-    </a>
-    <nav class="header-right" aria-label="Navigation principale">
-        <ul>
-            <!-- Les éléments de navigation seront chargés ici dynamiquement -->
-        </ul>
-    </nav>
-    <div class="header-actions">
-        <a href="acces-membre.html" class="member-access-button" aria-label="Accès Membres">Accès Membres</a>
-        <i id="theme-toggle" class="fas fa-moon" aria-label="Changer de thème"></i>
-        <i id="menu-toggle" class="fas fa-bars" aria-label="Menu"></i>
+    <a href="https://home.duperret.eu" class="button top-right-btn">Connexion</a>
+    <a href="/index.html" class="button top-left-btn">Accueil</a>
+    <div class="container">
+        <img src="/images/brand/logo_horizontal_sans-fond.png" alt="Logo" class="logo">
+        <p>Accès strictement réservé aux membres.</p>
+        <br>
+        <a href="/contact.html" class="button border-btn">Contactez-nous</a>
     </div>
-</header>
 
-<main>
-    <section id="accueil" aria-labelledby="accueil-title">
-        <h2 id="accueil-title">Site web de la famille Duperret</h2>
-        <p>Bienvenue sur ce site web.</p>
-    </section>
+    <footer>
+        &copy; 2024-2025 Duperret - <a href="/a-propos.html">Mentions légales</a>
+    </footer>
 
-    <section id="annuaire" aria-labelledby="annuaire-title">
-        <h2 id="annuaire-title" class="section-title">Annuaire des membres</h2>
-        <input type="text" id="search" placeholder="Rechercher une personne..." aria-label="Rechercher une personne">
-        <div class="membre-container" id="membre-container">
-            <!-- Les membres seront chargés ici dynamiquement -->
-        </div>
-    </section>
-</main>
-
-<footer>
-    <ul aria-label="Liens de pied de page">
-        <!-- Les éléments du footer seront chargés ici dynamiquement -->
-    </ul>
-</footer>
-
-<script src="js/loadNavigation.js" defer></script>
-<script src="js/loadFooter.js" defer></script>
-<script src="js/rechercheAnnuaire.js" defer></script>
-<script src="js/loadMembres.js" defer></script>
-<script src="js/themeToggle.js" defer></script>
-<script src="js/menuToggle.js" defer></script>
+    <script src="/js/animation-bg.js"></script>
 </body>
+
 </html>
