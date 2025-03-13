@@ -9,35 +9,22 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
-function generateLine() {
-    const points = [{ x: canvas.width / 2, y: canvas.height / 2 }];
-    const segments = 3 + Math.floor(Math.random() * 3);
-    let angleBase = Math.random() * Math.PI * 2;
-
-    for (let i = 0; i < segments; i++) {
-        const angle = angleOffset + i * (Math.PI / segments) + (Math.random() - 0.5);
-        const distance = 50 + Math.random() * 150;
-        const lastPoint = points[points.length - 1];
-
-        const newX = lastPoint.x + Math.cos(angle) * distance;
-        const newY = lastPoint.y + Math.sin(angle) * distance;
-
-        points.push({ x: newX, y: newY });
-    }
-
-    return { points, progress: 0, opacity: 1, fading: false };
-}
-
 const lines = [];
+const MAX_LINES = 5;
+const SEGMENTS_MIN = 4;
+const SEGMENTS_MAX = 6;
 
+// Fonction de génération d'une ligne avec des courbes douces
 function generateLine() {
-    const segments = 3 + Math.floor(Math.random() * 3);
     const points = [{ x: canvas.width / 2, y: canvas.height / 2 }];
     let angle = Math.random() * Math.PI * 2;
 
+    const segments = SEGMENTS_MIN + Math.floor(Math.random() * (SEGMENTS_MAX - SEGMENTS_MIN));
+    
     for (let i = 0; i < segments; i++) {
-        angle += (Math.PI / segments) + (Math.random() - 0.5);
-        const distance = 50 + Math.random() * 150;
+        angle += (Math.random() - 0.5) * Math.PI / 2; // Variabilité des angles
+        const distance = 80 + Math.random() * 120; // Distance entre segments
+
         const lastPoint = points[points.length - 1];
 
         points.push({
@@ -49,9 +36,12 @@ function generateLine() {
     return { points, progress: 0, opacity: 1, fading: false };
 }
 
+// Fonction de dessin avec interpolation pour courbes plus fluides
 function drawLine(line) {
     ctx.strokeStyle = `rgba(255,255,255,${line.opacity})`;
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 1.5;
+    ctx.lineCap = "round";
+
     ctx.beginPath();
     ctx.moveTo(line.points[0].x, line.points[0].y);
 
@@ -59,34 +49,38 @@ function drawLine(line) {
     for (let i = 1; i <= maxIndex; i++) {
         ctx.lineTo(line.points[i].x, line.points[i].y);
     }
+
     ctx.stroke();
 
-    // Nœuds
+    // Dessin des nœuds (petits cercles)
     for (let i = 1; i <= maxIndex; i++) {
         ctx.beginPath();
-        ctx.arc(line.points[i].x, line.points[i].y, 2, 0, Math.PI * 2);
+        ctx.arc(line.points[i].x, line.points[i].y, 2.5, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255,255,255,${line.opacity})`;
         ctx.fill();
     }
 
-    if (line.progress < line.points.length) {
-        line.progress += 0.03; // vitesse de pousse modérée
+    // Progression douce du tracé
+    if (line.progress < line.points.length - 1) {
+        line.progress += 0.02;
     } else if (!line.fading) {
-        setTimeout(() => line.fading = true, 8000); // reste affichée 8 secondes avant disparition
+        setTimeout(() => line.fading = true, 5000); // Attente avant disparition
     } else {
-        line.opacity -= 0.01;
+        line.opacity -= 0.02;
     }
 }
 
+// Animation
 function animate() {
-    ctx.fillStyle = 'rgba(0,0,0,0.06)';
+    ctx.fillStyle = 'rgba(0,0,0,0.08)'; // Assombrit légèrement le fond pour un effet plus propre
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Maintien à 5 lignes maximum
-    if (lines.length < 5 && Math.random() < 0.05) {
-        lines.push(generateLine(), generateLine());
+    // Ajout progressif de nouvelles lignes
+    if (lines.length < MAX_LINES && Math.random() < 0.02) {
+        lines.push(generateLine());
     }
 
+    // Dessin et suppression des lignes disparues
     lines.forEach((line, index) => {
         drawLine(line);
         if (line.opacity <= 0) lines.splice(index, 1);
@@ -96,3 +90,12 @@ function animate() {
 }
 
 animate();
+
+// Forcer le canvas à rester en background
+canvas.style.position = "fixed";
+canvas.style.top = "0";
+canvas.style.left = "0";
+canvas.style.width = "100vw";
+canvas.style.height = "100vh";
+canvas.style.zIndex = "-10";  // Assurer qu'il reste en arrière-plan
+canvas.style.pointerEvents = "none"; // Empêcher les interactions
