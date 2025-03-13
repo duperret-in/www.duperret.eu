@@ -135,13 +135,12 @@ canvas {
     z-index: 1;
 }
 
-/* Assurez-vous que le canvas est bien en arrière-plan */
-#animated-bg {
-    position: fixed; /* Permet de garder l'animation toujours en arrière-plan */
+/* Particules */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Définit le canvas en arrière-plan */
-    pointer-events: none; /* Empêche toute interaction avec l'animation */
+    z-index: -1; /* Assure que le conteneur reste en arrière-plan */
 }
