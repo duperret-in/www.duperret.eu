@@ -88,6 +88,13 @@ a.border-btn {
     z-index: 2;
 }
 
+.top-right-btn-2 {
+    position: absolute;
+    top: 20px;
+    right: 130px;
+    z-index: 2;
+}
+
 .top-left-btn {
     position: absolute;
     top: 20px;
