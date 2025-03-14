@@ -52,6 +52,8 @@ body.solid-bg {
     width: 150px;
     height: auto;
     z-index: 2;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Styles pour les conteneurs */
