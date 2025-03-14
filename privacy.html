@@ -10,34 +10,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <style>
+        .privacy-container {
+            margin: 0 auto; /* Centrer le conteneur */
+            max-width: 80%;
+            padding: 20px;
+            background-color: var(--container-bg-color);
+            box-shadow: 0 4px 10px var(--container-shadow-color);
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <a href="https://commun.duperret.eu" class="button top-right-btn">Connexion</a>
+    <div id="particles-js"></div>
+    <a href="https://commun.duperret.eu" class="button top-right-btn">Connexion</a>
         <a href="/index.html" class="button top-right-btn-2">Accueil</a>
-        <div class="container">
-            <img src="/images/brand/logo_horizontal_sans-fond.png" alt="Logo" class="logo">
-            <section aria-labelledby="about-title">
-                <h2>Politique de Confidentialité</h2>
+    <div class="privacy-container">
+        <img src="/images/brand/logo_horizontal_sans-fond.png" alt="Logo" class="logo">
+        <section aria-labelledby="about-title">
+            <h2>Politique de Confidentialité</h2>
 
-                <p>Votre vie privée est importante pour nous. Cette politique de confidentialité explique quelles informations nous sommes susceptibles de collecter et comment nous les utilisons.</p>
-                <p><b>Informations collectées :</b> Nous collectons des informations lorsque vous vous inscrivez sur notre site, vous vous connectez à votre compte, faites un achat, participez à un concours et/ou lorsque vous vous déconnectez. Les informations collectées incluent votre nom, votre adresse e-mail, votre numéro de téléphone et/ou votre carte de crédit.</p>
-                <p><b>Utilisation des informations :</b> Toutes les informations que nous collectons auprès de vous peuvent être utilisées pour :
-                <ul>
-                    <li>Personnaliser votre expérience et répondre individuellement</li>
-                    <li>Fournir un contenu publicitaire personnalisé</li>
-                    <li>Améliorer notre site web</li>
-                    <li>Améliorer le service client et vos besoins de prise en charge</li>
-                    <li>Vous contacter par e-mail</li>
-                    <li>Administrer un concours, une promotion, ou une enquête</li>
-                </ul></p>
-                <p><b>Confidentialité du commerce en ligne :</b> Nous sommes les seuls propriétaires des informations collectées sur ce site. Vos informations personnelles ne seront pas vendues, échangées, transférées, ou données à une autre société pour n'importe quelle raison, sans votre consentement, en dehors de ce qui est nécessaire pour répondre à une demande et/ou une transaction.</p>
-            </section>
-        </div>
-    </main>
+            <p>Votre vie privée est importante pour nous. Cette politique de confidentialité explique quelles informations nous sommes susceptibles de collecter et comment nous les utilisons.</p>
+            <p><b>Informations collectées :</b> Nous collectons des informations lorsque vous vous inscrivez sur notre site, vous vous connectez à votre compte, faites un achat, participez à un concours et/ou lorsque vous vous déconnectez. Les informations collectées incluent votre nom, votre adresse e-mail, votre numéro de téléphone et/ou votre carte de crédit.</p>
+            <p><b>Utilisation des informations :</b> Toutes les informations que nous collectons auprès de vous peuvent être utilisées pour :
+            <ul>
+                <li>Personnaliser votre expérience et répondre individuellement</li>
+                <li>Fournir un contenu publicitaire personnalisé</li>
+                <li>Améliorer notre site web</li>
+                <li>Améliorer le service client et vos besoins de prise en charge</li>
+                <li>Vous contacter par e-mail</li>
+                <li>Administrer un concours, une promotion, ou une enquête</li>
+            </ul></p>
+            <p><b>Confidentialité du commerce en ligne :</b> Nous sommes les seuls propriétaires des informations collectées sur ce site. Vos informations personnelles ne seront pas vendues, échangées, transférées, ou données à une autre société pour n'importe quelle raison, sans votre consentement, en dehors de ce qui est nécessaire pour répondre à une demande et/ou une transaction.</p>
+        </section>
+    </div>
     <footer>
         &copy; 2024-<span id="current-year"></span> Duperret - <a href="/a-propos.html">Mentions légales</a>
     </footer>
     <script src="js/footerYear.js" defer></script>
+    <script src="js/particles-init.js"></script>
 </body>
 </html>
