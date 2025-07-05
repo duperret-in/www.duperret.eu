@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "title": "Mecanum robot",
+            "image": "/images/projets/projet-1.webp"
+        },
+        {
+            "title": "Raspebberry Pi Sensors",
+            "image": "/images/projets/projet-2.webp"
+        },
+        {
+            "title": "Projet 3",
+            "image": "images/project3.jpg"
+        }
+    ]
+}

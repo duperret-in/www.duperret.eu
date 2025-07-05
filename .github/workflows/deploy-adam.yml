@@ -1,0 +1,36 @@
+name: Deploy /adam to adam.duperret.eu
+
+on:
+  push:
+    paths:
+      - 'adam/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source repo
+      uses: actions/checkout@v3
+
+    - name: Clone target repo
+      uses: actions/checkout@v3
+      with:
+        repository: duperret-in/adam.duperret.eu
+        path: target
+        token: ${{ secrets.GH_TOKEN }}
+
+    - name: Copy files
+      run: |
+        rm -rf target/*
+        cp -r adam/* target/
+
+    - name: Commit and push
+      run: |
+        cd target
+        git checkout gh-pages || git checkout -b gh-pages
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Deploy /adam to adam.duperret.eu" || echo "No changes to commit"
+        git push origin gh-pages

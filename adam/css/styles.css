@@ -1,0 +1,404 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #0078d7;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header:hover {
+    background-color: #005a9e;
+}
+
+/* Section Hero */
+.hero {
+    background-color: #0078d7;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    display: none; /* Supprimé */
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section À propos */
+.about {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.about h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Galerie de projets */
+.projects {
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.projects h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colonnes plus larges */
+    gap: 30px; /* Espacement plus grand entre les projets */
+    justify-content: center;
+    align-items: start; /* Aligne les projets en haut */
+}
+
+.project-item {
+    background-color: #ffffff;
+    border-radius: 15px; /* Coins plus arrondis */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus douce */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 100%; /* S'adapte à la largeur de la colonne */
+}
+
+.project-item:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px; /* Hauteur constante pour les images */
+    object-fit: cover; /* Ajuste l'image pour remplir l'espace sans déformation */
+    border-bottom: 3px solid #0078d7; /* Ligne décorative sous l'image */
+}
+
+.project-item h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Formulaire de contact */
+.contact {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #005a9e;
+}
+
+/* Section Parcours scolaire et académique */
+.education {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.education h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+/* Section Ce qui me définit */
+.definition {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.definition h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.definition p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Section Quelques chiffres */
+.stats {
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.stats h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.stats-grid div {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre douce */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-grid div:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.stats-grid h3 {
+    font-size: 2.5em; /* Taille de police plus grande */
+    color: #0078d7;
+    margin: 0;
+}
+
+.stats-grid p {
+    margin: 10px 0 0;
+    font-size: 1.1em; /* Taille de police légèrement augmentée */
+    color: #555; /* Couleur de texte adoucie */
+}
+
+/* Section Citation */
+.quote {
+    padding: 40px 20px;
+    background-color: #0078d7;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote h2 {
+    margin-bottom: 20px;
+}
+
+.quote blockquote {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* Section Mes projets d'ingénierie favoris */
+.favorite-projects {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.favorite-projects h2 {
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.favorite-projects p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Boutons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #0078d7;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px; /* Coins plus arrondis */
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+}
+
+.button:hover {
+    background-color: #005a9e;
+    color: black;
+    transform: translateY(-3px); /* Légère élévation au survol */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.button:active {
+    transform: translateY(0); /* Réinitialisation de l'élévation au clic */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Réduction de l'ombre au clic */
+}
+
+section > div {
+    display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    gap: 1px; /* Espacement entre les boutons */
+}
+
+/* Liens */
+a {
+    color: #0078d7;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #005a9e;
+    text-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em; /* Réduction de la taille de la police */
+    }
+
+    .hero {
+        padding: 40px 15px; /* Réduction des marges */
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Réduction de la taille du titre */
+    }
+
+    .hero p {
+        font-size: 1em; /* Réduction de la taille du texte */
+    }
+
+    main {
+        padding: 15px;
+        max-width: 100%; /* Utilisation de toute la largeur disponible */
+        box-shadow: none; /* Suppression de l'ombre pour un look plus simple */
+    }
+
+    .about-photo {
+        width: 120px; /* Réduction de la taille de la photo */
+        height: 120px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour les projets */
+        gap: 20px; /* Espacement réduit */
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Une seule colonne pour les chiffres */
+        gap: 15px; /* Espacement réduit */
+    }
+
+    .button {
+        padding: 10px 20px; /* Réduction de la taille des boutons */
+        font-size: 0.9em; /* Réduction de la taille de la police */
+    }
+
+    footer {
+        font-size: 0.8em; /* Réduction de la taille du texte dans le pied de page */
+    }
+}
